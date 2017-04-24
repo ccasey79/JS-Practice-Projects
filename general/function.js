@@ -63,3 +63,35 @@ if (quarter(120) % 3 === 0 ) {
 } else {
   console.log("The statement is false");
 }
+
+/////////////////////////////
+
+// Function with Global & Local variables
+var my_number = 7; //this has global scope
+
+var timesTwo = function(number) {
+    var my_number = number * 2;    // local variable
+    console.log("Inside the function my_number is: ");
+    console.log(my_number);
+};
+
+timesTwo(7);
+
+console.log("Outside the function my_number is: ")
+console.log(my_number);
+
+//////////////////////////////
+
+// Function with IF / ELSE statement
+var sleepCheck = function(numHours) {
+    if (numHours >= 8) {
+       return "You're getting plenty of sleep! Maybe even too much!";
+    } else {
+        numHours < 8;
+        return "Get some more shut eye!";
+    }
+}
+
+sleepCheck(10);
+sleepCheck(5);
+sleepCheck(8);
