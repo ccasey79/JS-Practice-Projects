@@ -12,8 +12,11 @@ var todoList = {
   changeTodo: function(position, nameChange) {
     this.todos[position] = nameChange;
     this.displayTodos();
+  },
+  deleteTodo: function(position) {
+    this.todos.splice(position, 1);
+    this.displayTodos();
   }
 };
 
-
-todoList.changeTodo(3, 'new item')
+todoList.deleteTodo(4);
