@@ -1,29 +1,32 @@
 
 console.log('JS Loaded');
 
-var fruits = ['orange', 'apple', 'pear', 'banana'];
+var cars = ['jaguar', 'ferrari', 'bentley', 'maserati'];
 
+// display this array
 
-// display the array
-
-function displayFruits() {
-  console.log('These are my fruits ', fruits);
+function displayCars() {
+  console.log('My selection of cars: ', cars);
 }
 
-// add another fruits
+// add a car to he array
 
-function addFruits(fruitName) {
-  fruits.push(fruitName);
-  displayFruits();
+function addToCars(newCar) {
+  cars.push(newCar);
+  displayCars();
 }
 
-addFruits('grape');
+addToCars('rolls royce');
 
-// reverse array fruits
+// sort the order of array list
 
-function reverseFruits() {
-  fruits.reverse();
-  displayFruits();
+function sortCarList() {
+  cars.sort();
+  displayCars();
 }
 
-reverseFruits();
+sortCarList();
+
+///////////////////////////
+
+// Build object
