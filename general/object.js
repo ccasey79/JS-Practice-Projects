@@ -1,5 +1,7 @@
 
 
+// Object with methods example
+
 var todoList = {
   todos: ["item 1", "item 2", "item 3", "item 4"],
   displayTodos: function() {
