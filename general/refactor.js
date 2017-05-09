@@ -95,3 +95,22 @@ var handlers = {
     todoList.toggleAll();
   }
 };
+
+// Creating the list items - create li & ul, then append li to the ul.
+
+// var todoLi = document.createElement('li');
+// var todoUl = document.querySelector('ul');
+//
+// todoUl.appendChild(todoLi);
+
+  var view = {
+    displayTodos: function() {
+    var todosUl = document.querySelector('ul');            // grabs ul element
+    todosUl.innerHTML = "";                                // gets rid of any previous ul list
+    for(var i = 0; i < todoList.todos.length; i++ ) {     // creates a list item for each todo list item from the array.
+      var todoLi = document.createElement('li');
+      todoLi.textContent = todoList.todos[i].todoText;  // take the li, accessing li text content property, setting to todoText property of each of the todo objects thats looped through, to add text!
+      todosUl.appendChild(todoLi);                         // appends the todo list item to ul.
+      }
+    }
+  };
