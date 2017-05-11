@@ -64,6 +64,9 @@ var todoList = {
   }
 };
 
+// DISPLAYING BUTTONS IN HTML BEFORE THEY ARE CREATED INTO OBJECTS - handler object in refactor.js
+
+
 var displayTodosButton = document.getElementById('displayTodosButton');
 var toggleAllButton = document.getElementById('toggleAllButton');
 

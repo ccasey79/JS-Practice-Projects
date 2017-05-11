@@ -1,4 +1,8 @@
 
+
+// Practice file
+
+
 var todos = ["item1", "item 2", "item 3"];
 
 // It should have a function to display the todos (array)
