@@ -23,3 +23,15 @@ var toggleAllButton = document.getElementById('toggleAllButton');
 toggleAllButton.addEventListener('click', function(){
   todoList.toggleAll();
 });
+
+
+// Displaying, creating lists to the HTML
+
+// HTML
+
+// <ul>
+// </ul>
+
+var todoLi = document.createElement('li');
+var todosUl = document.querySelector('ul');
+todosUl.appendChild(todoLi);
