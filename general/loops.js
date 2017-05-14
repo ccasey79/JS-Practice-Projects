@@ -18,6 +18,7 @@ var todoList = {
     }
   },
   addTodo: function(todoText) {
+    debugger;
     this.todos.push({
       todoText: todoText,                             // todoText property
       completed: false
