@@ -1,5 +1,7 @@
 
 
+console.log('js loaded!');
+
 var carList = {
   cars: ['bentley', 'ferrari', 'mercedes'],
   displayCars: function() {
@@ -14,3 +16,12 @@ var carList = {
     this.displayCars();
   }
 };
+
+
+var cars = ['mini', 'fiat', 'buick', 'skoda'];
+
+var latestCars = cars.map(function(car) {
+  return car;
+});
+
+console.log(latestCars);
