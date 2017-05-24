@@ -1,27 +1,28 @@
 
 
-console.log('js loaded!');
-
-var carList = {
-  cars: ['bentley', 'ferrari', 'mercedes'],
-  displayCars: function() {
-    console.log('My personal car collection: ', this.cars);
+var countryList = {
+  countries: [],
+  displayCountries: function() {
+    console.log('Countries I would like to visit: ', this.countries);
   },
-  addToCars: function(carText) {
-    this.cars.push(carText);
-    this.displayCars();
+  addToCountry: function(textCountry) {
+    this.countries.push({
+      textCountry: textCountry,
+      completed: false
+    });
+    this.displayCountries;
   },
-  changeCar: function(position, carText) {
-    this.cars[position] = carText;
-    this.displayCars();
+  changeCountry: function(position, textCountry) {
+    this.countries[position].textCountry = textCountry;
+    this.displayCountries;
+  },
+  deleteCountry: function(position) {
+    this.countries.splice(position, 1);
+    this.displayCountries();
+  },
+  toggleCompleted: function(position) {
+    var country = this.countries[position];
+    country.completed = !country.completed;
+    displayCountries();
   }
 };
-
-
-var cars = ['mini', 'fiat', 'buick', 'skoda'];
-
-var latestCars = cars.map(function(car) {
-  return car;
-});
-
-console.log(latestCars);
