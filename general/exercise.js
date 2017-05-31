@@ -61,12 +61,35 @@ var countryList = {
    }
 };
 
-var displayCountriesButton = document.getElementById('displayCountriesButton');
-displayCountriesButton.addEventListener('click', function() {
-  countryList.displayCountries();
-});
+// var displayCountriesButton = document.getElementById('displayCountriesButton');
+// displayCountriesButton.addEventListener('click', function() {
+//   countryList.displayCountries();
+// });
+//
+// var toggleAllButton = document.getElementById('toggleAllButton');
+// toggleAllButton.addEventListener('click', function() {
+//   countryList.toggleAll();
+// });
 
-var toggleAllButton = document.getElementById('toggleAllButton');
-toggleAllButton.addEventListener('click', function() {
-  countryList.toggleAll();
-});
+// Handlers object - for events on objects
+
+var handlers = {
+  displayCountries: function() {
+    countryList.displayCountries();
+  },
+  toggleAll: function() {
+    countryList.toggleAll();
+  },
+  addToCountry: function() {
+    var addCountryTextInput = document.getElementById('addCountryTextInput');
+    countryList.addToCountry(addCountryTextInput.value);
+    addCountryTextInput.value = "";
+  },
+  changeCountry: function() {
+    var changeCountryPositionInput = document.getElementById('changeCountryPositionInput');
+    var changeCountryTextInput = document.getElementById('changeCountryTextInput');
+    countryList.changeCountry(changeCountryPositionInput.valueAsNumber, changeCountryTextInput.value);
+    changeCountryPositionInput.value = "";
+    changeCountryTextInput.value = "";
+  }
+};
