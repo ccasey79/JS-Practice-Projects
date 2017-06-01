@@ -91,10 +91,10 @@ var handlers = {
     changeCountryTextInput.value = "";
     view.displayCountries();
   },
-  deleteCountry: function() {
-    var deleteCountryPositionInput = document.getElementById('deleteCountryPositionInput');
-    countryList.deleteCountry(deleteCountryPositionInput.valueAsNumber);
-    deleteCountryPositionInput.value = "";
+  deleteCountry: function(position) {
+    // var deleteCountryPositionInput = document.getElementById('deleteCountryPositionInput');
+    countryList.deleteCountry(position);
+    // deleteCountryPositionInput.value = "";
     view.displayCountries();
   },
   toggleCompleted: function() {
@@ -126,8 +126,29 @@ var view = {
             countryTextWithCompletion = (' ') + country.textCountry;
         }
 
+        countriesLi.id = i;
         countriesLi.textContent = countryTextWithCompletion;
+        countriesLi.appendChild(this.createDeleteButton());
         countriesUl.appendChild(countriesLi);
     }
-  }
+  },
+    createDeleteButton: function() {
+      var deleteButton = document.createElement('button');
+      deleteButton.textContent = 'Delete';
+      deleteButton.className = 'deleteButton';
+      return deleteButton;
+    },
+    setUpEventListeners: function() {
+      var countriesUl = document.querySelector('ul');
+
+      countriesUl.addEventListener('click', function(event){
+        var elementClicked = event.target;
+
+        if (elementClicked.className === 'deleteButton') {
+          handlers.deleteCountry(parseInt(elementClicked.parentNode.id));
+        }
+      });
+    }
 };
+
+view.setUpEventListeners();
