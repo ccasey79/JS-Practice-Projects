@@ -1,0 +1,50 @@
+
+body {
+  background: #e6fffa;
+}
+
+.lotteryBallsContainer {
+  float: left;
+  display: flex;
+}
+
+.number {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  background: yellow;
+  border: 1px solid black;
+  margin-right: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#lotteryButton {
+  width: 150px;
+  font-size: 20px;
+  border-radius: 5px;
+  background: #ccc;
+  padding: 5px;
+  outline: none;
+
+}
+
+#lotteryButton:hover {
+  opacity: 0.7;
+}
+
+#resetButton {
+  width: 150px;
+  font-size: 20px;
+  border-radius: 5px;
+  background: #ccc;
+  padding: 5px;
+  outline: none;
+
+}
+
+#resetButton:hover {
+  opacity: 0.7;
+}
