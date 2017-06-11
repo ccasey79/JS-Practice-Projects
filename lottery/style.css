@@ -10,6 +10,8 @@ h1 {
   font-family: times;
 }
 
+/* Lottery Balls */
+
 .lotteryBallsContainer {
 
   display: flex;
@@ -34,11 +36,12 @@ h1 {
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
 }
 
+/* Buttons */
+
 .buttonContainer {
   margin-top: 5%;
   margin-left: 37%;
 }
-
 
 #lotteryButton {
   width: 150px;
