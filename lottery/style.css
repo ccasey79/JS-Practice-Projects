@@ -44,25 +44,29 @@ h1 {
   width: 150px;
   font-size: 20px;
   border-radius: 5px;
-  background: #ccc;
+  background: #fff;
   padding: 5px;
   outline: none;
+  box-shadow: 10px 10px 5px #888888
 }
 
 #lotteryButton:hover {
-  opacity: 0.7;
+  opacity: 0.8;
+  border: 1px solid #000;
 }
 
 #resetButton {
   width: 150px;
   font-size: 20px;
   border-radius: 5px;
-  background: #ccc;
+  background: #fff;
   padding: 5px;
   outline: none;
   margin-left: 2%;
+  box-shadow: 10px 10px 5px #888888
 }
 
 #resetButton:hover {
-  opacity: 0.7;
+  opacity: 0.8;
+  border: 1px solid #000;
 }
