@@ -16,23 +16,23 @@ function lotteryNumbers() {
   }
 }
 
-  // if(lottery 0 < 9 ) {
+  // if(lottery === 0 < 9 ) {
   //   Math.floor(Math.random() * 9);
   //   numbers[i].style.backgroundColor = 'white';
   // } else if {
-  //     (lottery 10 < 19) {
+  //     (lottery === 10 < 19) {
   //       Math.floor((Math.random() * 11) + 9);
   //         numbers[i].style.backgroundColor = 'blue';
   //   } else if {
-  //       (lottery 20 < 29) {
+  //       (lottery === 20 < 29) {
   //         Math.floor((Math.random() * 21) + 9);
   //           numbers[i].style.backgroundColor = 'pink';
   //   } else if {
-  //       (lottery 30 < 39) {
+  //       (lottery === 30 < 39) {
   //         Math.floor((Math.random() * 31) + 9);
   //           numbers[i].style.backgroundColor = 'green';
   //   } else {
-  //       (lottery 40 < 49) {
+  //       (lottery === 40 < 49) {
   //         Math.floor((Math.random() * 41) + 9);
   //           numbers[i].style.backgroundColor = 'yellow';
   //       }
