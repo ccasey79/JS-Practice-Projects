@@ -5,6 +5,7 @@ function lotteryNumbers() {
   var numbers = [];
 
   for(var i = 0; i < 6; i++) {
+
     var lottery = Math.floor(Math.random() * 49);
 
     if(numbers.indexOf(lottery) === -1) {
@@ -20,6 +21,8 @@ function lotteryNumbers() {
 
 
 
+// ** Code below - trying to add the requirement of changing the lottery balls colours **
+
 // function lotteryNumbers() {
 //
 //   var numbers = [];
@@ -29,8 +32,9 @@ function lotteryNumbers() {
 //     var lottery = Math.floor(Math.random() * 49);
 //
 //
+//   ** (Adding colours to the lottery balls) **
 //
-//     if(lottery === 0 < 9 ) {
+//     if (lottery === 0 < 9 ) {
 //       Math.floor(Math.random() * 9);
 //       lotteryBalls.numbers[i].style.backgroundColor = 'white';
 //     } else if {
