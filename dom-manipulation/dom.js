@@ -1,7 +1,7 @@
 // EXAMINE THE DOCUMENT OBJECT //
 
 // console.dir(document);
-// console.log(document.domain);
+// (document.domain);
 // console.log(document.URL);
 // console.log(document.title);
 // //document.title =  123;
@@ -88,4 +88,3 @@
 //   odd[i].style.backgroundColor = '#f4f4f4';
 //   even[i].style.backgroundColor = '#ccc';
 // }
-
