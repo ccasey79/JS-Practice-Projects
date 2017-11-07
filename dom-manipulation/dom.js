@@ -1,6 +1,6 @@
 // EXAMINE THE DOCUMENT OBJECT //
 
-// console.dir(document);
+//console.dir(document);
 // (document.domain);
 // console.log(document.URL);
 // console.log(document.title);
