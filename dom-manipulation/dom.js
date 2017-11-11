@@ -165,9 +165,14 @@ var itemList = document.querySelector('#items');
 
 // EVENTS //
 
-// var button = document.getElementById('button').addEventListener('click', buttonClick);
+var button = document.getElementById('button').addEventListener('click', buttonClick);
 
-//function buttonClick(e){
+    //function buttonClick(e) {
+    //console.log('Button Clicked!');
+
+//}
+
+function buttonClick(e){
   //console.log('Button clicked');
   // document.getElementById('header-title').textContent = 'Changed';
   // document.querySelector('#main').style.backgroundColor = '#f4f4f4';
@@ -177,9 +182,10 @@ var itemList = document.querySelector('#items');
 // console.log(e.target.id);
 //   // console.log(e.target.className);
 //   // console.log(e.target.classList);
-//   // var output = document.getElementById('output');
-//   // output.innerHTML = '<h3>'+e.target.id+'</h3>';
+// var output = document.getElementById('output');
+// output.innerHTML = '<h3>'+e.target.id+'</h3>';
 
+//}
 //   // console.log(e.type);
 
 //   //console.log(e.clientX);
@@ -209,6 +215,8 @@ var box = document.getElementById('box');
 
 // box.addEventListener('mousemove', runEvent);
 
+
+
 var itemInput = document.querySelector('input[type="text"]');
 var form = document.querySelector('form');
 var select = document.querySelector('select');
@@ -228,16 +236,15 @@ var select = document.querySelector('select');
 // select.addEventListener('change', runEvent);
 // select.addEventListener('input', runEvent);
 
-form.addEventListener('submit', runEvent);
+//form.addEventListener('submit', runEvent);
 
-function runEvent(e){
-  e.preventDefault();
-  console.log('EVENT TYPE: '+e.type);
-
+//function runEvent(e){
+//  e.preventDefault();
+//  console.log('EVENT TYPE: '+e.type);
+//}
   //console.log(e.target.value);
   // document.getElementById('output').innerHTML = '<h3>'+e.target.value+'</h3>';
 
   // output.innerHTML = '<h3>MouseX: '+e.offsetX+' </h3><h3>MouseY: '+e.offsetY+'</h3>';
 
   // document.body.style.backgroundColor = "rgb("+e.offsetX+","+e.offsetY+", 40)";
-}
