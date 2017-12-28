@@ -13,7 +13,7 @@ form.addEventListener('submit', addItem);
 itemList.addEventListener('click', removeItem);
 
 // Filter the event (search bar)
-filter.addEventListener('keyup', filterItems )
+filter.addEventListener('keyup', filterItems);
 
 
 
@@ -62,6 +62,8 @@ function removeItem(e) {
     }
   }
 }
+
+
 
 
 // Filter items (on search bar)

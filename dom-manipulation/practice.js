@@ -1,14 +1,35 @@
 console.log('JS Loaded!');
 
-// Variable contains the element
-var itemInput = document.querySelector('input[type="text"]');
+var form = document.getElementById('addForm');
+var itemList = document.getElementById('items');
+var container = document.getElementById('main');
 
+// Add event listeners
+form.addEventListener('submit', addItem);
 
-// Add an Event Listener to that getElementById
-itemInput.addEventListener('keydown', eventRun);
+// Run the add item event function
+function addItem(e) {
+  e.preventDefault();
 
-// Function which carries out the event when the event action take place
-function eventRun(e) {
-  document.getElementById('box').innerHTML = '<h3>'+e.target.value+'</h3>'
-  document.getElementById('box').style.backgroundColor = "yellow";
+  // Get the input value
+  var newItem = document.getElementById('item').value;
+
+  // Create the li Element
+  var newLi = document.createElement('li');
+
+  // Add className
+  newLi.className = 'list-group-item';
+
+  // Add the text from the li
+  newLi.appendChild(document.createTextNode(newItem));
+
+  // Added the li to the ul
+  itemList.append(newLi);
+
+  container.style.backgroundColor = 'pink';
+  container.style.borderColor = 'red';
+
 }
+
+var date = new Date();
+document.getElementById('dateInfo').innerHTML = date.getFullYear();
