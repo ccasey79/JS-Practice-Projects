@@ -1,34 +1,54 @@
 
-console.log('JS Loaded!');
+console.log('JS LOADED!');
 
-const name = "Olivia";
-const city = "Los Angeles";
-const age = 25;
-const profession = "Secretary";
+// Define UI Vars
 
-let person;
+const form = document.querySelector('#task-form');        // FORM
+const taskList = document.querySelector('.collection');   // UL
+const clearBtn = document.querySelector('.clear-tasks');  // 'A' LINK
+const filter = document.querySelector('#filter');         // FILTER TASKS LABEL
+const taskInput = document.querySelector('#task');        // INPUT TASK
 
-person = `${name} is ${age}, lives in ${city} and is a bit of an office ${profession} slut!`
+// Load all event listeners
+loadEventListeners();
 
-document.body.innerHTML = person;
-
-
-const lad = {
-  firstName: 'Bob',
-  surname: 'Taylor',
-  age: 36,
-  email: 'bob@bob.com',
-  address: {
-    city: 'Boston',
-    state: 'MA'
-  },
+function loadEventListeners() {
+  // Add task event
+  form.addEventListener('submit', addTask)
 }
 
-let val;
+// Add Task
+function addTask(e) {
+  if(taskInput.value === '' ) {
+    alert('Add a task');
+  }
 
-val = lad;
+// Create li element
+const li = document.createElement('li');
 
-val = lad.firstName;
-val = lad.email;
+// Add class
+li.className = 'collection-item';
 
-document.body.innerHTML = val;
+// Create text node and append to li
+li.appendChild(document.createTextNode(taskInput.value));
+
+// Create new link createElement
+const link  = document.createElement('a');
+
+// Add class
+link.className = 'delete item secondary-content';
+
+// Add icon html
+link.innerHTML = '<i class="fa fa-remove"></i>';
+
+// Append link to li
+li.appendChild(link);
+
+// Append li to ul
+taskList.appendChild(li);
+
+// Clear input
+taskInput.value = '';
+
+  e.preventDefault();
+}
