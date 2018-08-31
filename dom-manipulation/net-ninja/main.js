@@ -70,12 +70,67 @@ console.log('JS Loaded!');
 
 
 // DOM EVENTS 
-let buttons = document.querySelectorAll('#book-list .delete');
+// let buttons = document.querySelectorAll('#book-list .delete');
 
-buttons.forEach(function(button){
-  button.addEventListener('click', function(e){
+// buttons.forEach(function(button){
+//   button.addEventListener('click', function(e){
 
+//     const li = e.target.parentElement;
+//     li.parentNode.removeChild(li)
+//   });
+// });
+
+// Event Bubbling
+
+const list = document.querySelector('#book-list ul');
+
+// delete books
+
+list.addEventListener('click', function(e){
+  if(e.target.className == 'delete') {
     const li = e.target.parentElement;
-    li.parentNode.removeChild(li)
-  });
+    list.removeChild(li);
+  }
 });
+
+// add book list (Submit event listener with forms)
+
+const addForm = document.forms['add-book'];
+
+addForm.addEventListener('submit', function(e){
+  e.preventDefault();
+  const value = addForm.querySelector('input[type="text"]').value;
+    //console.log(value);
+
+
+
+    // Create elements 
+    const li = document.createElement('li');
+    const bookName = document.createElement('span');
+    const deleteBtn = document.createElement('span');
+
+    // add Content
+    deleteBtn.textContent = 'delete';
+    bookName.textContent = value;
+
+    // add Classes
+    bookName.classList.add('name');
+    deleteBtn.classList.add('delete');
+
+    // Append to document
+    li.appendChild(bookName);
+    li.appendChild(deleteBtn);
+    list.appendChild(li);
+
+    // Hide books
+    const hideBox = document.querySelector('#hide');
+    hideBox.addEventListener('change', function(e){
+      if(hideBox.checked){
+        list.style.display = 'none';
+      } else {
+        list.style.display = 'block';
+      }
+    });
+  });
+
+
